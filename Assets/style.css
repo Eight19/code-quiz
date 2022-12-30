@@ -1,8 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Sofia");
 
-*{
+body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Sofia", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-around;
+  background: linear-gradient(linear-gradient);
+  color: #000;
+}
+
+.quiz_box{
+  min-height: 100px;
+  padding: 15px;
+  width: 400px;
+  background-color: blue;
+  border-radius: 10px;
+
 }
