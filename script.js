@@ -56,23 +56,29 @@ var questions = [
 
     var displayQuestion = function () {
         questionEl.querySelector("h2").textContent = questions[cursor].Text;
+        questionEl.querySelector("#possibleAnswers").innerHTML =null;
         for (var buttonLabel of questions[cursor].possibleAnswers) {
-            var buttonEl = document.createElement("button")
+            var buttonEl = document.createElement("button");
+            buttonEl.textContent = buttonLabel;
+            buttonEl.dataset.choice = buttonLabel[0];
+            questionEl.querySelector("#possibleAnswers").appendChild(buttonEl);
         }
     };
 
 
     var advance = function(event) {
         var element = event.target;
-
-          if (element.matches(".question button")) {
-              var answer = element.dataset.choice ===correctAnswers[cursor]
+        if (element.matches(".question button")) {
+              var answer = element.dataset.choice ===correctAnswers[cursor];
+              console.log(element.dataset.choice);
+              console.log(correctAnswers[cursor]);
+              console.log(answer);
             if (cursor < questions.length - 1) {
-                console.log(answer);
             cursor++;
-        }
+            questionEl.dataset.index = cursor;
+            }
         displayQuestion();
-    }
+        }
     };
 
     document.addEventListener("click", advance);
