@@ -11,5 +11,9 @@ body{
   min-height: 100vh;
   justify-content: space-around;
   background: linear-gradient(linear-gradient);
-  color: rgb(29, 146, 64);
 }
+
+buttons{
+  background-color: aqua;
+}
+ 
