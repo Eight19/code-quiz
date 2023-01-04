@@ -10,6 +10,8 @@ var cursor = 0;
     // "A process that aims to locate the exact source of errors or flaws in the code?"
     // ];
 
+    var correctAnswers = ["2", "2", "0", "1","2", "3"];
+
     var displayQuestion = function () {
         for (var question of questions) {
             console.log(question);
@@ -24,8 +26,10 @@ var cursor = 0;
     var advance = function(event) {
         var element = event.target;
 
-        if (element.matches(".question button")) {
+          if (element.matches(".question button")) {
+              var answer = element.dataset.choice ===correctAnswers[cursor]
             if (cursor < questions.length - 1) {
+                console.log(answer);
             cursor++;
         }
         displayQuestion();
