@@ -1,5 +1,4 @@
-var nextEl = document.querySelector
-("#next");
+var questions = document.querySelectorAll(".question");
 var cursor = 0;
 
 // var questions = [
@@ -12,18 +11,27 @@ var cursor = 0;
     // ];
 
     var displayQuestion = function () {
-        nextEl.textContent = questions
-        [cursor];
+        for (var question of questions) {
+            console.log(question);
+            if (question.dataset.index != cursor) {
+                question.style.display = "none";
+            } else {
+                question.style.display = "block";
+            }
+        }
     };
 
-    var advance = function() {
-        if (cursor < questions.length - 1) {
+    var advance = function(event) {
+        var element = event.target;
+
+        if (element.matches(".question button")) {
+            if (cursor < questions.length - 1) {
             cursor++;
         }
-        // displayQuestion();
+        displayQuestion();
+    }
     };
 
-    nextEl.addEventListener("click", advance);
+    document.addEventListener("click", advance);
 
-    // displayQuestion();
-    
+    displayQuestion();
