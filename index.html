@@ -7,33 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Software Development Code Quiz</title>
-    <style>
-
-        header {
-            border: 10px;
-            border-radius: 15px;
-            border-color: rgb(0, 0, 0);
-            background-color: rgb(103, 195, 248);
-        }
-        body {
-            font-family: "Sofia", sans-serif;
-            background-color: rgb(170, 208, 219);
-        }
-        button {
-            background-color: rgb(83, 155, 218);
-            padding: 3px;
-            margin: 15px;
-            border-radius: 7px;
-        }
-    </style>
 </head>
-<body>
-    <header><h1>Software Development Code Quiz</h1></header>
 
+
+<body>
+    <h1>CODING QUIZ</h1>
+   
       <!--Information Box-->
       <div class="Quiz Instructions">
-        <div class="Quiz-title"><span>Directions</span>
+        <div class="Quiz-Instructions"><span>Before you begin:</span>
         </div>
         <div class="info-list">
             <div class="info">1. Once you begin the quiz, the timer will start</div>
@@ -41,22 +25,24 @@
             <div class="info">3. The quiz ends once all questions are answered or the timer reaches zero</div>
             <div class="info">4. You may save your initials and score at the end</div>
         </div>
-        <div class="buttons">
-            <button class="start">Start Quiz</button>
-            <button class="pause">Stop Quiz</button>
+
+        <div id="wrapper">
+            <div class="quiz text-center">
+              <a id="start" class="btn btn-primary btn-lg" href="#" role="button">Start</a>
+            </div>
+    
+            <div id="subwrapper"></div>
+        </div>
+
+    <div class="card" style="width: 25em;margin: 0 auto;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p id=cardText class="card-text">Placeholder</p>
         </div>
     </div>
-
-    <section class="Question" data-index="0">
-        <h2 id="next question"></h2>
-        <div id="possibleAnswers"></div>
-    </section>
-    
-
-    
-    
-    
-    
+          
+<script type = "text/javascript" src = "assets/javascript/app.js"></script>    
 <script src="script.js"></script>
+
 </body>
 </html>
